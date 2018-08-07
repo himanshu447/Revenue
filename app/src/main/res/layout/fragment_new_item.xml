@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/log_in_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:elevation="10dp"
+        app:cardElevation="10dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/bg_bottom_right_border"
+                    android:padding="3dip"
+                    android:text="@string/new_item_name" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Ctrl-O" />
+
+            </TableRow>
+
+            <View
+                android:layout_height="2dip"
+                android:background="#FF909090" />
+
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/bg_bottom_right_border"
+                    android:padding="3dip"
+                    android:text="@string/new_item_description" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Ctrl-S" />
+            </TableRow>
+
+            <View
+                android:layout_height="2dip"
+                android:background="#FF909090" />
+
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/bg_bottom_right_border"
+                    android:padding="3dip"
+                    android:text="@string/new_item_phone" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Ctrl-Shift-S" />
+            </TableRow>
+
+            <View
+                android:layout_height="2dip"
+                android:background="#FF909090" />
+
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/bg_bottom_right_border"
+                    android:padding="3dip"
+                    android:text="@string/new_item_amount" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Ctrl-Shift-S" />
+            </TableRow>
+
+            <View
+                android:layout_height="2dip"
+                android:background="#FF909090" />
+
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/bg_bottom_right_border"
+                    android:padding="3dip"
+                    android:text="@string/new_item_first_due_date" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Ctrl-Shift-S" />
+            </TableRow>
+
+            <View
+                android:layout_height="2dip"
+                android:background="#FF909090" />
+
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/bg_bottom_right_border"
+                    android:padding="3dip"
+                    android:text="@string/new_item_recurrence" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Ctrl-Shift-S" />
+            </TableRow>
+
+        </TableLayout>
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/sign_in_btn"
+        android:text="@string/Save" />
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fab_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/sign_in_btn"
+            android:paddingBottom="10dp"
+            android:paddingEnd="10dp"
+            fab:fab_colorNormal="#DA4336"
+            fab:fab_colorPressed="#E75043"
+            fab:fab_colorRipple="#99FFFFFF"
+            fab:fab_shadowColor="#66000000"
+            fab:fab_showShadow="true"
+            fab:ignore="RtlSymmetry"
+            fab:menu_backgroundColor="#ccffffff"
+            fab:menu_fab_label="Choose an action"
+            fab:menu_labels_colorNormal="#333333"
+            fab:menu_labels_colorPressed="#444444"
+            fab:menu_labels_colorRipple="#66FFFFFF"
+            fab:menu_labels_ellipsize="end"
+            fab:menu_labels_maxLines="-1"
+            fab:menu_labels_position="left"
+            fab:menu_labels_showShadow="true"
+            fab:menu_labels_singleLine="true"
+            fab:menu_openDirection="up">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_edit"
+                fab:fab_label="Edit an item"
+                fab:fab_colorNormal="#2bb673"
+                fab:fab_colorPressed="#2bb673"
+                fab:fab_colorRipple="##2bb673"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_add"
+                fab:fab_label="Menu item 2"
+                fab:fab_size="mini" />
+
+        </com.github.clans.fab.FloatingActionMenu>
+    </RelativeLayout>-->
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu_red"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true"
+        fab:menu_backgroundColor="#ccffffff"
+        fab:menu_fab_label="Menu label">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            fab:fab_size="mini"
+            fab:fab_label="Disabled" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            fab:fab_size="mini"
+            fab:fab_label="Remove button" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            fab:fab_size="mini"
+            fab:fab_label="Restore Button" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</FrameLayout>
