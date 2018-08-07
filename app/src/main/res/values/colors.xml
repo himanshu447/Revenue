@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#ffa634</color>
+    <color name="colorPrimaryDark">#e0912c</color>
+    <color name="colorAccent">#2bb672</color>
     <color name="log_in_bg">#e6e6e6</color>
     <color name="sign_in_btn">#2bb673</color>
+
+    <color name="border_color">#cfcfcf</color>
+
+    <color name="installment_green">#25911a</color>
+    <color name="installment_yello">#fff32f</color>
+    <color name="installment_red">#de2e2e</color>
+    <color name="installment_week_Day_dark_grey">#9f9f9f</color>
+
+
 </resources>

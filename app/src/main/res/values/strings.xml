@@ -9,4 +9,11 @@
     <string name="new_item_recurrence">Recurrence</string>
     <string name="add_new_item">Add New Item</string>
     <string name="add_new_partner">Add Partner</string>
+    <string name="Total_Amount">Total Amount</string>
+    <string name="balance_due">Balance_due</string>
+    <string name="amount_received">Amount Received</string>
+    <string name="pay">Pay</string>
+    <string name="no_data">No Data</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="add_new_item_partner">Partner</string>
 </resources>
