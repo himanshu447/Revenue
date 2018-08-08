@@ -15,4 +15,9 @@
     <color name="installment_week_Day_dark_grey">#9f9f9f</color>
 
 
+    <color name="edit_text_line">#cfcfcf</color>
+    <color name="revenue_title_orange">#d81616</color>
+    <color name="revenue_description">#7e7e7e</color>
+    <color name="recurrence">#c2c2c2</color>
+
 </resources>

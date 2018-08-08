@@ -3,27 +3,19 @@ package com.example.knoxpo.revenue.fragments
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.support.v4.app.Fragment
-import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import com.example.knoxpo.revenue.R
-import com.example.knoxpo.revenue.activities.InstallmentsActivitty
-import com.example.knoxpo.revenue.activities.TransactionActivity
+import com.example.knoxpo.revenue.activities.AddPartnerActivity
+import com.example.knoxpo.revenue.activities.AddTransactionActivity
 import com.example.knoxpo.revenue.model.PartnerModel
-import com.github.clans.fab.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_new_item.*
 import com.github.clans.fab.FloatingActionMenu
 import java.util.ArrayList
-import android.view.MotionEvent
-import android.widget.FrameLayout
-
-
 
 
 class NewItemFragment : ListFragment<PartnerModel,NewItemFragment.NewPartnerViewHolder>() {
@@ -42,7 +34,7 @@ class NewItemFragment : ListFragment<PartnerModel,NewItemFragment.NewPartnerView
     }
 
     override fun getItemLayoutId(viewType: Int): Int {
-        return R.layout.item_add_new_partner
+        return R.layout.item_transaction
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,6 +48,19 @@ class NewItemFragment : ListFragment<PartnerModel,NewItemFragment.NewPartnerView
             list.add(model)
         }
 
+        addItemsAfterFetch(list)
+
+    }
+    inner class NewPartnerViewHolder(item : View) : RecyclerView.ViewHolder(item)
+    {
+        private val name = item.findViewById<TextView>(R.id.newPartnerNameTV)!!
+        private val phoneNo = item.findViewById<TextView>(R.id.newPartnerPhoneTV)!!
+
+        fun bindData(model: PartnerModel)
+        {
+            name.text = model.name
+            phoneNo.text=model.phoneno
+        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -75,12 +80,12 @@ class NewItemFragment : ListFragment<PartnerModel,NewItemFragment.NewPartnerView
         menus.add(menu_add_item)
 
         addNewItemFAB.setOnClickListener {
-            val intent = Intent(activity,InstallmentsActivitty::class.java)
+            val intent = Intent(activity,AddTransactionActivity::class.java)
             startActivity(intent)
         }
 
         addPartnerFAB.setOnClickListener {
-            val intent = Intent(activity,TransactionActivity::class.java)
+            val intent = Intent(activity,AddPartnerActivity::class.java)
             startActivity(intent)
         }
 
@@ -93,20 +98,6 @@ class NewItemFragment : ListFragment<PartnerModel,NewItemFragment.NewPartnerView
         menu_add_item.setOnMenuButtonClickListener {
 
             menu_add_item.toggle(true)
-        }
-
-    }
-
-
-    inner class NewPartnerViewHolder(item : View) : RecyclerView.ViewHolder(item)
-    {
-        private val name = item.findViewById<TextView>(R.id.newPartnerNameTV)!!
-        private val phoneNo = item.findViewById<TextView>(R.id.newPartnerPhoneTV)!!
-
-        fun bindData(model: PartnerModel)
-        {
-            name.text = model.name
-            phoneNo.text=model.phoneno
         }
     }
 }

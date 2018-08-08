@@ -29,7 +29,7 @@ class TransactionFragment : ListFragment<TransactionModel, TransactionFragment.M
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        for (i in 0..4)
+        for (i in 0..1)
         {
             val model = TransactionModel()
             model.date1 = "Mar 24, 2018"

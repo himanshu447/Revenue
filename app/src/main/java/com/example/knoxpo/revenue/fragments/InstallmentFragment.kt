@@ -36,9 +36,6 @@ class InstallmentFragment : ListFragment<Any, RecyclerView.ViewHolder>() {
             holder.bind(item as InstallmentModel)
     }
 
-    override fun getFragmentLayoutId(): Int {
-        return R.layout.item_installment_yellow
-    }
 
     override fun getItemType(item: Any): Int {
 
@@ -64,6 +61,10 @@ class InstallmentFragment : ListFragment<Any, RecyclerView.ViewHolder>() {
 
         addItemsAfterFetch(list)
 
+    }
+
+    override fun getFragmentLayoutId(): Int {
+        return R.layout.item_installment_green
     }
 
     override fun getItemLayoutId(viewType: Int) = when(viewType){
