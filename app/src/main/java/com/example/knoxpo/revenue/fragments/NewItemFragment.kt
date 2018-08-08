@@ -6,6 +6,7 @@ import android.os.Handler
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +20,10 @@ import com.github.clans.fab.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_new_item.*
 import com.github.clans.fab.FloatingActionMenu
 import java.util.ArrayList
+import android.view.MotionEvent
+import android.widget.FrameLayout
+
+
 
 
 class NewItemFragment : ListFragment<PartnerModel,NewItemFragment.NewPartnerViewHolder>() {
@@ -26,7 +31,7 @@ class NewItemFragment : ListFragment<PartnerModel,NewItemFragment.NewPartnerView
 
     private val menus = ArrayList<FloatingActionMenu>()
     private val mUiHandler = Handler()
-    private var list : MutableList<PartnerModel> = arrayListOf()
+    private val list : MutableList<PartnerModel> = arrayListOf()
 
     override fun onCreateViewHolder(view: View, viewType: Int): NewPartnerViewHolder {
        return NewPartnerViewHolder(view)
@@ -38,10 +43,6 @@ class NewItemFragment : ListFragment<PartnerModel,NewItemFragment.NewPartnerView
 
     override fun getItemLayoutId(viewType: Int): Int {
         return R.layout.item_add_new_partner
-    }
-
-    override fun getFragmentLayoutId(): Int {
-        return R.layout.fragment_new_item
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -90,15 +91,17 @@ class NewItemFragment : ListFragment<PartnerModel,NewItemFragment.NewPartnerView
         }
 
         menu_add_item.setOnMenuButtonClickListener {
+
             menu_add_item.toggle(true)
         }
+
     }
 
 
     inner class NewPartnerViewHolder(item : View) : RecyclerView.ViewHolder(item)
     {
-        val name = item.findViewById<TextView>(R.id.newPartnerNameTV)
-        val phoneNo = item.findViewById<TextView>(R.id.newPartnerPhoneTV)
+        private val name = item.findViewById<TextView>(R.id.newPartnerNameTV)!!
+        private val phoneNo = item.findViewById<TextView>(R.id.newPartnerPhoneTV)!!
 
         fun bindData(model: PartnerModel)
         {

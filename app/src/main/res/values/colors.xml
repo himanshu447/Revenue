@@ -9,6 +9,7 @@
     <color name="border_color">#cfcfcf</color>
 
     <color name="installment_green">#25911a</color>
+    <color name="transaction_amount">#23a1dc</color>
     <color name="installment_yello">#fff32f</color>
     <color name="installment_red">#de2e2e</color>
     <color name="installment_week_Day_dark_grey">#9f9f9f</color>

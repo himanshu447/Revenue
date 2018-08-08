@@ -1,10 +1,8 @@
 package com.example.knoxpo.revenue.fragments
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
-import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
@@ -14,7 +12,7 @@ import com.example.knoxpo.revenue.model.TransactionModel
 class TransactionFragment : ListFragment<TransactionModel, TransactionFragment.MyViewHolder>() {
 
 
-    val list : MutableList<TransactionModel> = arrayListOf()
+    private val list : MutableList<TransactionModel> = arrayListOf()
 
     override fun onBindViewHolder(holder: MyViewHolder, item: TransactionModel?) {
         holder.bindData(item!!)
@@ -48,14 +46,9 @@ class TransactionFragment : ListFragment<TransactionModel, TransactionFragment.M
 
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
-
-
     inner class MyViewHolder(item: View) : RecyclerView.ViewHolder(item) {
-        val date2 :TextView = item.findViewById(R.id.transactionDateTV)
-        val amoun2 : TextView = item.findViewById(R.id.tractionAmountTV)
+        private val date2 :TextView = item.findViewById(R.id.transactionDateTV)
+        private val amoun2 : TextView = item.findViewById(R.id.tractionAmountTV)
 
         fun bindData(model: TransactionModel) {
             date2.text = model.date1
